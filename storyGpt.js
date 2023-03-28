@@ -1,5 +1,7 @@
 
 /* ToDo:
+  - Add .readme instructions
+  - Remove this todo list from github commits
   - mobile support
   - Question mark icon next to Api key with link to where to get it + explanation that you can
     delete your key after using it if they don't trust me, or just use my source code directly via Github
