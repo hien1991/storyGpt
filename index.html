@@ -19,7 +19,7 @@
 
     <div class="card api-key">
       <label for="api_key" class="label-inline">API Key:</label>
-      <input type="text" id="api_key" v-model="apiKey" placeholder="Enter your OpenAI API key" class="input-inline">
+      <input type="text" id="api_key" v-model="apiKey" placeholder="Enter your OpenAI API key" class="input-inline" inputmode="done">
     </div>
 
     <div class="card pre-prompt">
@@ -31,25 +31,25 @@
         <option value="none">None</option>
       </select>
       <div v-if="prePrompt === 'custom'">
-        <input type="text" v-model="customPrePrompt" placeholder="Enter your custom pre-prompt">
+        <input type="text" v-model="customPrePrompt" placeholder="Enter your custom pre-prompt" inputmode="done">
       </div>
     </div>
 
     <div class="card story" v-if="prePrompt !== 'new' || storyGenerated">
       <label class="storyLabel" for="story">Story:</label>
       <span class="token-count">Word count: {{ storyTokenCount }}</span>
-      <textarea id="story" rows="10" cols="50" v-model="story"></textarea>
+      <textarea id="story" rows="10" cols="50" v-model="story" inputmode="done"></textarea>
     </div>
 
     <div class="card prompt">
       <label for="prompt">Writing Prompt:</label>
-      <textarea id="prompt" rows="6" cols="50" v-model="prompt"
+      <textarea id="prompt" rows="6" cols="50" v-model="prompt" inputmode="done"
         placeholder="Enter the writing prompt for the next chapter or scene"></textarea>
     </div>
 
     <div class="card">
       <label for="guidelines">Guidelines:</label>
-      <textarea id="guidelines" rows="4" cols="50" v-model="guidelines"
+      <textarea id="guidelines" rows="4" cols="50" v-model="guidelines" inputmode="done"
         placeholder="Enter post-prompt writing guidelines"></textarea>
     </div>
 

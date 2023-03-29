@@ -1,13 +1,10 @@
 
 /* ToDo:
-  - Add .readme instructions
+  - Add .readme instructions: how to use, how to set up locally, purpose, etc.
   - Remove this todo list from github commits
-  - mobile support
+  - Clear button to make it easier on mobile
   - Question mark icon next to Api key with link to where to get it + explanation that you can
     delete your key after using it if they don't trust me, or just use my source code directly via Github
-  - Add penalty field and maybe other settings
-  - Deploy somewhere. Also put in github with instructions to simply put files
-    into directory and click the html to run this. Also include instructions
   - AI model switching support
   - For the "Story" section, I'm thinking we can add some annotation tools, like the paragraph 
     IDs GPT mentioned and the annotation request for each marked paragraph. Maybe some color highlight 
