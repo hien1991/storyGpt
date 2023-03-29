@@ -2,9 +2,13 @@
 /* ToDo:
   - Add .readme instructions: how to use, how to set up locally, purpose, etc.
   - Remove this todo list from github commits
-  - Clear button to make it easier on mobile
+  - Prompt Library so I can add/delete my guidelines locally
+  - Ask what to use as a good placeholder on guidelines to help users understand what it is
+  - Annoying highlight issue where if I move the mouse off-screen, the highlight goes away.. could
+    be due to keyboard dismiss function
   - Question mark icon next to Api key with link to where to get it + explanation that you can
     delete your key after using it if they don't trust me, or just use my source code directly via Github
+  - Link to Api Key to make it user-friendly for anyone else who wants to try it
   - AI model switching support
   - For the "Story" section, I'm thinking we can add some annotation tools, like the paragraph 
     IDs GPT mentioned and the annotation request for each marked paragraph. Maybe some color highlight 
@@ -22,6 +26,8 @@
   - Support to call API 2-5 times and display generated results on separate tabs.
       - Maybe even further support to help mix/match these multiple generated results
       - Maybe support to call different AI models and mix/match their results.
+  - Try asking AI to redo the entire responsive design or whatever it's called, including mobile support
+  - The whole thing with the generated text showing up in the Story section is unintuitive. Ask AI for redesign ideas
 */
 
 const app = new Vue({
@@ -43,7 +49,7 @@ const app = new Vue({
   computed: {
     storyTokenCount() {
       return this.story.trim().split(/\s+/).length;
-    },
+    }
   },
   methods: {
     handlePrePromptChange() {
@@ -111,6 +117,9 @@ const app = new Vue({
         localStorage.setItem("customPrePrompt", this.customPrePrompt);
       }
     },
+    clearField(fieldName) {
+      this[fieldName] = "";
+    },
   },
   mounted() {
     this.apiKey = localStorage.getItem("apiKey") || "";
@@ -124,7 +133,7 @@ const app = new Vue({
 
     //Dismisses keyboard on mobile when tapped outside
     document.body.addEventListener("click", function (event) {
-      if (!event.target.matches("input, textarea, select")) {
+      if (event.target === document.body) {
         document.activeElement.blur();
       }
     });    

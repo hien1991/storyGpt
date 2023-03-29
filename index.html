@@ -39,19 +39,22 @@
       <label class="storyLabel" for="story">Story:</label>
       <span class="token-count">Word count: {{ storyTokenCount }}</span>
       <textarea id="story" rows="10" cols="50" v-model="story" inputmode="done"></textarea>
+      <button @click="clearField('story')" class="clear-btn"><i class="fas fa-trash"></i></button>
     </div>
-
+    
     <div class="card prompt">
       <label for="prompt">Writing Prompt:</label>
       <textarea id="prompt" rows="6" cols="50" v-model="prompt" inputmode="done"
         placeholder="Enter the writing prompt for the next chapter or scene"></textarea>
+      <button @click="clearField('prompt')" class="clear-btn"><i class="fas fa-trash"></i></button>
     </div>
-
+    
     <div class="card">
       <label for="guidelines">Guidelines:</label>
       <textarea id="guidelines" rows="4" cols="50" v-model="guidelines" inputmode="done"
         placeholder="Enter post-prompt writing guidelines"></textarea>
-    </div>
+      <button @click="clearField('guidelines')" class="clear-btn"><i class="fas fa-trash"></i></button>
+    </div>     
 
     <div class="card settings">
       <div>
