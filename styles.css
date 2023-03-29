@@ -5,9 +5,25 @@
   }
 }
 
+/* Desktop browsers */
+@media (min-width: 1300px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 992px) {
   .container {
     width: 95%;
+  }
+}
+
+/* General media query for mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding-left: 2.5%;
   }
 }
 
@@ -50,24 +66,12 @@
   }
 }
 
-/* General media query for mobile devices */
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .container {
-    width: 95%;
-  }
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f0f3f5;
   color: #333;
   margin: 0;
   padding: 0;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
 }
 
 h1 {
